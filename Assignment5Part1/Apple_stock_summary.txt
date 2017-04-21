@@ -1,0 +1,9 @@
+
+Range of dates processed: 1980-12-12 to 2017-02-14.
+The highest adjusted close: 0.162609. 
+The lowest adjusted close: 135.020004.
+Biggest daily gain (based on % Change): 9.98% on 2004-04-15
+Biggest daily loss (based on % Change): -0.01% on 1992-02-14
+Highest daily "Volatility": 962385784
+Average (arithmetic mean) of adjusted closing prices: 17.563306694474775
+Average daily trading volume: 90460195.14360885
