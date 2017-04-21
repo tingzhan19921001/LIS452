@@ -60,16 +60,20 @@ def word_score():
         list_word_value.append((single_word,important_value))
 
     dict_of_word_value = dict(list_word_value)
-    print(dict_of_word_value.get('gulliver'))
-    #问题出在 gulliver现在这个找不到值啊，把所有的小写了以后 十分case insentive 以至于找不到啊
+    #print(dict_of_word_value.get('FIRST'))
 
     sentences_value = 0
 
-    for i in range(5):
+
+    single_sentence_value = []
+    for i in range(len(sentences)):
         for word in word_in_sentence[i]:
             if word.lower() in new_list:
-                sentences_value = sentences_value + dict_of_word_value.get(word)
-        print(sentences[i],sentences_value)
+                word=word.lower()
+                sentences_value = float(sentences_value) + dict_of_word_value.get(word)
+        # multiple the real value by 10000 for future calculation
+                #calculation of sentence value is wrong, reconsider it.
+                print(i+1,sentences_value/items[i][1]*10000)
 
 
     #print(sentences[1],word_in_sentence[1][1])
@@ -89,31 +93,3 @@ def word_score():
 
 
 word_score()
-
-
-
-
-
-def Abstract():
-    #text = input('Which file to abstract?')
-    text = open('gulliver.txt','r',encoding='ISO-8859-1').read()
-    text = text.lower()
-    sentence = sent_tokenize(text)
-
-    #print(sentence)
-    #print(len(sentence))
-    word_in_sentence =[word_tokenize(s) for s in sentence]
-    #tokenize the words in sentence, the type of word in sentence is list, word_in_sentence[i][j] is
-    #the jth word in ith sentence
-    #print(type(word_in_sentence))
-
-
-    #print(word_in_sentence[8][2])
-    for i in range(len(sentence)):
-        for word in word_in_sentence[i]:
-            if word in stopwords:
-                word_in_sentence[i].remove(word)
-
-
-Abstract()
-
